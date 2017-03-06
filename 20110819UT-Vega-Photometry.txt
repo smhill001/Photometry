@@ -1,0 +1,6 @@
+Vega-20110818-NUV-sum5000ms-Aligned.fit,
+Vega-20110818-NUV-sum20000ms-Aligned.fit,
+Vega-20110818-GRN-sum250ms-Aligned.fit,
+Vega-20110818-BLU-sum250ms-Aligned.fit,
+Vega-20110818-RED-sum500ms-Aligned.fit,
+Vega-20110818-NIR-sum500ms-Aligned.fit,

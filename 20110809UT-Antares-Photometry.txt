@@ -1,0 +1,8 @@
+Antares_Blue_sum10x50ms-Aligned.fit,
+Antares_Green_sum10x200ms-Aligned.fit,
+Antares_Green_sum10x50ms-Aligned.fit,
+Antares_NIR_sum10x1000ms-Aligned.fit,
+Antares_NIR_sum10x100ms-Aligned.fit,
+Antares_NUV_sum10x20sec-Aligned.fit,
+Antares_NUV_sum9x2sec-Aligned.fit,
+Antares_Red_sum10x100ms-Aligned.fit,

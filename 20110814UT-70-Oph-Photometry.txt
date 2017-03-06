@@ -1,0 +1,5 @@
+70-Oph-20110813-NUV-sum160sec.fit,
+70-Oph-20110813-Blue-sum7sec.fit,
+70-Oph-20110813-Green-sum7sec.fit,
+70-Oph-20110813-Red-sum14sec.fit,
+70-Oph-20110813-NIR-sum14sec.fit,

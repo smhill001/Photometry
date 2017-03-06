@@ -1,0 +1,5 @@
+AlpHer-20110813-NUV-sum140sec.fit,
+AlpHer-20110813-Blue-sum7sec.fit,
+AlpHer-20110813-Green-sum7sec.fit,
+AlpHer-20110813-Red-sum14sec.fit,
+AlpHer-20110813-NIR-sum14sec.fit,
