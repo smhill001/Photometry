@@ -79,9 +79,11 @@ class StarRainbow:
 class observation_list:
     def __init__(self,ObservationListFile):
         #The initial plan is to read ALL records in the observation list
-        self.StarIdentifierDD=[''] #Keyword for star identification
+        self.StarIdentifier=['']   #Keyword for star identification
+        self.Target=['']           #Target, e.g., component of a multiple star
         self.DateUT=['']           #UT Date of observation: YYYYMMDDUT
-        self.Instrument=['']       #Instrument code, to be used for aperture
+        self.Optics=['']       #Instrument code, to be used for aperture
+        self.Camera=['']       #Instrument code, to be used for aperture
         self.FileList=['']         #List of observation image files (FITS)
         self.Xcen=[0.]             #X center coordinate in FITS image (pixels)
         self.Ycen=[0.]             #Y center coordinate in FITS image (pixels)
@@ -100,27 +102,31 @@ class observation_list:
         for recordindex in range(1,nrecords):
             fields=CfgLines[recordindex].split(',')
             if self.FirstTime:
-                self.StarIdentifierDD[0]=str(fields[0])
-                self.DateUT[0]=str(fields[1])
-                self.Instrument[0]=str(fields[2])
-                self.FileList[0]=str(fields[3])
-                self.Xcen[0]=float(fields[4])
-                self.Ycen[0]=float(fields[5])
-                self.R1[0]=float(fields[6])
-                self.R2[0]=float(fields[7])
-                self.R3[0]=float(fields[8])
+                self.StarIdentifier[0]=str(fields[0])
+                self.Target[0]=str(fields[1])
+                self.DateUT[0]=str(fields[2])
+                self.Optics[0]=str(fields[3])
+                self.Camera[0]=str(fields[4])
+                self.FileList[0]=str(fields[5])
+                self.Xcen[0]=float(fields[6])
+                self.Ycen[0]=float(fields[7])
+                self.R1[0]=float(fields[8])
+                self.R2[0]=float(fields[9])
+                self.R3[0]=float(fields[10])
                 self.FirstTime=False
                 self.NObs=1
             else:
-                self.StarIdentifierDD.extend([str(fields[0])])
-                self.DateUT.extend([str(fields[1])])
-                self.Instrument.extend([str(fields[2])])
-                self.FileList.extend([str(fields[3])])
-                self.Xcen.extend([float(fields[4])])
-                self.Ycen.extend([float(fields[5])])
-                self.R1.extend([float(fields[6])])
-                self.R2.extend([float(fields[7])])
-                self.R3.extend([float(fields[8])])
+                self.StarIdentifier.extend([str(fields[0])])
+                self.Target.extend([str(fields[1])])
+                self.DateUT.extend([str(fields[2])])
+                self.Optics.extend([str(fields[3])])
+                self.Camera.extend([str(fields[4])])
+                self.FileList.extend([str(fields[5])])
+                self.Xcen.extend([float(fields[6])])
+                self.Ycen.extend([float(fields[7])])
+                self.R1.extend([float(fields[8])])
+                self.R2.extend([float(fields[9])])
+                self.R3.extend([float(fields[10])])
                 self.NObs=self.NObs+1
 
 def GetStarObsFileNames(Path,IndexFile):

@@ -3,6 +3,9 @@ M57,Nebulae-Planetary,350.,850.,11,0.,600000.,7,lin,spectrum,Null,
 NGC7009,Nebulae-Planetary,350.,850.,11,0.,100000.,7,lin,spectrum,Null,
 #Vega,Stars,350.,1050.,15,1000.,40000000.,7,log,spectrum,a0v.txt,
 Vega,Stars,350.,1050.,15,1000.,30000000.,7,log,broadband,a0v.txt,
+
+Photometry Project 2011,Stars,350.,1050.,15,300.,100000000.,7,log,broadband,a0v.txt,
+
 BetLyr,Stars,350.,1050.,15,3000.,3000000.,7,log,spectrum,b8.txt,
 GamLyr,Stars,350.,1050.,15,300.,3000000.,7,log,spectrum,b9iii.txt,
 SigAqr,Stars,350.,1050.,15,300.,3000000.,7,log,spectrum,a0iv.txt,
