@@ -1,14 +1,23 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jun 24 09:41:47 2014
+Updated on Tue Mar 07 09:41:47 2017
+###############################################################################
+NAME:       BroadBand_Photometry.py
 
-A simple example of using ASTROPY to open and disply a FITS file of Jupiter
-along with a color bar.
+PURPOSE:    To extract stellar photometric information from FITS image files
+            and plot the results
+            
+INPUTS:     A single parameter, "Target", points to a configuration file
+            that provides the stellar targets and plotting information. That
+            configuration file also points to secondary configuraiton files
+            that contain the FITS data file lists for each observation.
+            
+LIBRARIES:  This code calls the SpecPhotLibNew.py library. It is an updated
+            subset of the SpecPhotLibV006.py library that had grown cumbersome.
+                    
 
-Not sure why, but when I ran this deep into a session, it gave errors the
-first couple of times, then worked. Maybe not importing all I need to?
-
-@author: Steven
+###############################################################################
+@author: Steven Hill
 """
 import sys
 drive='f:'
@@ -25,11 +34,16 @@ sys.path.append(drive+'/Astronomy/Python Play/FITSImageStuff')
 import pylab as pl
 import SpecPhotLibNew as SPL
 
-Target="Photometry Project 2011"
+#Target="Photometry Project 2011"
+#Target="16-17-Dra-Photometry"
+#Target="Vega Photometry"
+#Target="Antares"
+Target="70-Oph"
 #DateObs="20110814UT"
 width=0.5
 clrs=SPL.StarRainbow()
-Observations=SPL.observation_list('Photometry Project 2011.txt')
+#Observations=SPL.observation_list('Photometry Project 2011.txt')
+Observations=SPL.observation_list(Target+'.txt')
 print "Observations=",Observations
 print Observations.DateUT
 print "drive,Target=",drive,Target
@@ -47,21 +61,22 @@ for Obsindex in range(0,Observations.NObs):
         '/Imaging Data/'+Observations.DateUT[Obsindex]+'/'
     FNArray=SPL.GetStarObsFileNames(PathName,Observations.FileList[Obsindex])
 
-    ############################### Antares 20110809UT                
-    
     WavelengthCenters,NetCountsArray=SPL.BroadBandSpectrum(PathName,FNArray,Centroid,Radii)
+    print "TEST:",Observations.Target[Obsindex][-2:]
+    if Observations.Target[Obsindex][-3:]==" ND":
+        print "Hi"
+        NetCountsArray=NetCountsArray/0.04
 
     Label=Observations.StarIdentifier[Obsindex]+Observations.Target[Obsindex]+\
         ' '+Observations.DateUT[Obsindex]
     clr=clrs.c1[Obsindex % 6,:]
-    #PlotBroadBand(WavelengthCenters,NetCountsArray,LBL,clr,first,plotparams,width):
     SPL.PlotBroadBand(WavelengthCenters,NetCountsArray,Label,clr,first,plotparams,width)
     first=False
 
 pl.subplots_adjust(left=0.08, bottom=0.15, right=0.98, top=0.90,
             wspace=None, hspace=None)
 
-pl.savefig('Photometry2011.png',dpi=300)
+pl.savefig(Target+'.png',dpi=300)
 
 ###Testing Area
 

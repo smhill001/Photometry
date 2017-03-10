@@ -2,6 +2,16 @@
 """
 Created on Sun Mar 05 09:50:38 2017
 
+MODULES:    FilterParameters
+            spec_plot_params
+            StarRainbow
+            observation_list
+            GetStarObsFileNames
+            BroadBandSpectrum
+            ComputeNetRate
+            ComputeNetRate1
+            PlotBroadBand
+            
 @author: Astronomy
 
 New baseline version of SPL Library 3/5/2017
@@ -23,10 +33,19 @@ class FilterParameters:
         self.EW=0.
         self.Aperture=0.
 
-        FilterNames=["Blue","Green","Green","NIR","NUV","Red"]
-        WavelengthCenters=[450,550.,550.,750.,380.,650.]
-        WavelengthWidths=[110.,95.4,95.4,130.,40.,62.8]
-
+        #FilterNames=["Blue","Green","Green","NIR","NUV","Red"]
+        #WavelengthCenters=[450,550.,550.,750.,380.,650.]
+        #WavelengthWidths=[110.,95.4,95.4,130.,40.,62.8]
+        FilterNames=["380NUV","450BLU","486HIB","501OIII","550GRN","650RED",
+                     "656HIA","672SII","685NIR","742NIR", "807NIR","889CH4"]
+        WavelengthCenters=[379.5,460.0,486.0,499.0,525.0,647.0,
+                           656.0,672.0,842.5,871.0,903.5,889.0]
+        WavelengthWidths=[15.4,100.0,10.0,10.0,90.0,75.0,
+                          11.0,10.0,315.0,258.0,193.0,11.2]
+        #Widths are from integration bounds in "FluxCalibration.xlsx" for 
+        #broadband filters. FWHM from analysis for NUV, HIA and CH4.  OIII,
+        #HIB and SII are 10nm placeholders.
+                          
         FilterIndex = [k for k, x in enumerate(FilterNames) if x == FilterName] #what does this do!?
         FI=np.int(FilterIndex[0])
         self.CenterWV=WavelengthCenters[FI]
@@ -268,13 +287,13 @@ def PlotBroadBand(WavelengthCenters,NetCountsArray,LBL,clr,first,plotparams,widt
         #print plotparams.Type
         if plotparams.ObsType=='broadband':
             print "in branch"
-            pl.scatter(WavelengthCenters,NetCountsArray,linewidth=0,label=LBL,color=clr)
+            pl.scatter(WavelengthCenters,NetCountsArray,linewidth=1,label=LBL,color=clr,marker='o',s=2)
         elif plotparams.ObsType=='spectrum':
             pl.plot(WavelengthCenters,NetCountsArray,linewidth=width,label=LBL,color=clr)
         pl.legend(loc=1,ncol=1, borderaxespad=0.,prop={'size':4})    
     else:
         if plotparams.ObsType=='broadband':
-            pl.scatter(WavelengthCenters,NetCountsArray,linewidth=0,label=LBL,color=clr)
+            pl.scatter(WavelengthCenters,NetCountsArray,linewidth=1,label=LBL,color=clr,marker='o',s=2)
         elif plotparams.ObsType=='spectrum':
             pl.plot(WavelengthCenters,NetCountsArray,linewidth=width,label=LBL,color=clr)
         pl.legend(loc=1,ncol=1, borderaxespad=0.,prop={'size':5})

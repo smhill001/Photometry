@@ -1,0 +1,5 @@
+16-17-Dra-20110910-NUV-sum211sec-Aligned.fit,
+16-17-Dra-20110910-BLU-sum20sec-Aligned.fit,
+16-17-Dra-20110910-GRN-sum20sec-Aligned.fit,
+16-17-Dra-20110910-RED-sum40sec-Aligned.fit,
+16-17-Dra-20110910-NIR-sum40sec-Aligned.fit,
