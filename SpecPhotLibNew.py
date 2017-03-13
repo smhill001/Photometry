@@ -156,6 +156,7 @@ def GetStarObsFileNames(Path,IndexFile):
     parameters of that filter with regard to photometry are then
     obtained by a table look up routine (list here)
     """
+    print "GetStarObsFileNames.IndexFile=",IndexFile
     CfgFile=open(IndexFile,'r')
     CfgLines=CfgFile.readlines()
     CfgFile.close()

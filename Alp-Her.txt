@@ -1,0 +1,3 @@
+StarIdentifier,Target,DateUT,Optics,Camera,FileList,Xcen,Ycen,R1,R2,R3
+Alp-Her,-A ND,20110814UT,SCT200,ST2000,20110814UT-Alp-Her-Photometry.txt,163.197,97.852,9.,29.,39.
+Alp-Her,-B ND,20110814UT,SCT200,ST2000,20110814UT-Alp-Her-Photometry.txt,148.214,101.657,9.,29.,39.

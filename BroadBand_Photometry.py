@@ -38,7 +38,10 @@ import SpecPhotLibNew as SPL
 #Target="16-17-Dra-Photometry"
 #Target="Vega Photometry"
 #Target="Antares"
-Target="70-Oph"
+#Target="70-Oph"
+#Target="Alp-Her"
+Target="BetLyr"
+#Target="S-ORI"
 #DateObs="20110814UT"
 width=0.5
 clrs=SPL.StarRainbow()
@@ -52,13 +55,14 @@ plotparams=SPL.spec_plot_params(drive,Target)
 plotparams.DateTimeKey=""
 
 first=True
-print Observations.FileList
+print "Observations.FileList=",Observations.FileList
 
 for Obsindex in range(0,Observations.NObs):
     Centroid=[Observations.Xcen[Obsindex],Observations.Ycen[Obsindex]]                
     Radii=[Observations.R1[Obsindex],Observations.R2[Obsindex],Observations.R3[Obsindex]]
-    PathName='f:/Astronomy/Projects/Stars/'+Observations.StarIdentifier[Obsindex]+\
+    PathName='f:/Astronomy/Projects/'+plotparams.TargetType+'/'+Observations.StarIdentifier[Obsindex]+\
         '/Imaging Data/'+Observations.DateUT[Obsindex]+'/'
+    print Observations.FileList[Obsindex]
     FNArray=SPL.GetStarObsFileNames(PathName,Observations.FileList[Obsindex])
 
     WavelengthCenters,NetCountsArray=SPL.BroadBandSpectrum(PathName,FNArray,Centroid,Radii)

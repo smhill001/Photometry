@@ -5,11 +5,17 @@ NGC7009,Nebulae-Planetary,350.,850.,11,0.,100000.,7,lin,spectrum,Null,
 Vega Photometry,Stars,350.,1050.,15,300000.,100000000.,7,log,broadband,a0v.txt,
 Antares,Stars,350.,1050.,15,30000.,10000000.,7,log,broadband,a0v.txt,
 70-Oph,Stars,350.,1050.,15,1000.,1000000.,7,log,broadband,a0v.txt,
+16-17-Dra-Photometry,Stars,350.,1050.,15,10.,1000000.,7,log,broadband,a0v.txt,
+Alp-Her,Stars,350.,1050.,15,1000.,3000000.,7,log,broadband,a0v.txt,
+BetLyr,Stars,350.,1050.,15,100.,3000000.,7,log,broadband,a0v.txt,
+#S-ORI,Stars,350.,1050.,15,1.,30000.,7,log,broadband,a0v.txt,
+S-ORI,Nebulae-Diffuse,350.,1050.,15,1.,30000.,7,log,broadband,a0v.txt,
+
+
 
 Photometry Project 2011,Stars,350.,1050.,15,30.,100000000.,7,log,broadband,a0v.txt,
-16-17-Dra-Photometry,Stars,350.,1050.,15,10.,1000000.,7,log,broadband,a0v.txt,
 
-BetLyr,Stars,350.,1050.,15,3000.,3000000.,7,log,spectrum,b8.txt,
+#BetLyr,Stars,350.,1050.,15,3000.,3000000.,7,log,spectrum,b8.txt,
 GamLyr,Stars,350.,1050.,15,300.,3000000.,7,log,spectrum,b9iii.txt,
 SigAqr,Stars,350.,1050.,15,300.,3000000.,7,log,spectrum,a0iv.txt,
 Neptune,Planets,350.,1050.,15,10.,30000.,7,log,spectrum,g2v.txt,

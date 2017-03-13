@@ -1,0 +1,5 @@
+BetLyr-20110813-Green_sum10sec.fit,
+BetLyr-20110813-Blue_sum10sec.fit,
+BetLyr-20110813-NIR_sum20sec.fit,
+BetLyr-20110813-Red_sum15sec.fit,
+BetLyr-20110813-NUV_sum120sec.fit,
