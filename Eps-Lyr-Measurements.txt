@@ -1,0 +1,3 @@
+MeasTarget,DataType,DataTarget,DateUT,Optics,Camera,FileList,Xcen,Ycen,R1,R2,R3
+Eps-1-Lyr ND,Stars,EpsLyr,20110814UT,SCT200,ST2000,Eps-Lyr-20110814UT-FITS.txt,905.318,295.118,20.,30.,40.
+Eps-2-Lyr ND,Stars,EpsLyr,20110814UT,SCT200,ST2000,Eps-Lyr-20110814UT-FITS.txt,804.402,1008.657,20.,30.,40.

@@ -1,0 +1,5 @@
+EpsLyr-20110813-NUV_sum200sec.fit,
+EpsLyr-20110813-Blue_sum10sec.fit,
+EpsLyr-20110813-Red_sum14sec.fit,
+EpsLyr-20110813-Green_sum7sec.fit,
+EpsLyr-20110813-NIR_sum16sec.fit,

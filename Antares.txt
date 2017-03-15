@@ -1,2 +1,0 @@
-StarIdentifier,Target,DateUT,Optics,Camera,FileList,Xcen,Ycen,R1,R2,R3
-Antares, ND?,20110809UT,SCT200,ST2000,20110809UT-Antares-Photometry.txt,739., 634.,20.,25.,35.

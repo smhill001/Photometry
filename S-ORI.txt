@@ -1,2 +1,0 @@
-StarIdentifier,Target,DateUT,Optics,Camera,FileList,Xcen,Ycen,R1,R2,R3
-M42 - Orion Nebula,S-ORI,20110223UT,SCT200,ST2000,S-ORI-Photometry.txt,1287.955,339.355,12.,20.,28.,

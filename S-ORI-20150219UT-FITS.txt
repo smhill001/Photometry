@@ -1,0 +1,3 @@
+M42-20150218LT-807-sum0h58m-Flattened-Aligned.fit,
+M42-20150218LT--SII-sum50m40s-Aligned.fit,
+M42Wide-201502XX-SII-2h15m-Aligned.fit,
