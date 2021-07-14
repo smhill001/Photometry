@@ -63,7 +63,7 @@ def ComputeNetRate(FN,positions,radii):
     final_sum = phot_table['aperture_sum_raw'] - bkg_sum
     rate=((final_sum/hdulist[0].header['EXPTIME'])/Filter.Aperture)/Filter.EW
     phot_table['net_count_rate'] = rate
-
+    print phot_table
     WVCenter=Filter.CenterWV
     
     return rate,WVCenter

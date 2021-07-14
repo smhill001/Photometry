@@ -70,6 +70,7 @@ for MeasIndex in range(0,Measurements.NObs):
         '; '+Measurements.DateUT[MeasIndex]
     clr=clrs.c1[MeasIndex % 6,:]
     SPP.PlotBroadBand(WavelengthCenters,NetCountsArray,Label,clr,first,plotparams,width)
+    print WavelengthCenters, NetCountsArray
     first=False
 
 pl.subplots_adjust(left=0.08, bottom=0.15, right=0.98, top=0.90,
