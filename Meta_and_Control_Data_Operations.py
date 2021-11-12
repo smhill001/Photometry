@@ -31,13 +31,13 @@ class FilterParameters:
         #FilterNames=["Blue","Green","Green","NIR","NUV","Red"]
         #WavelengthCenters=[450,550.,550.,750.,380.,650.]
         #WavelengthWidths=[110.,95.4,95.4,130.,40.,62.8]
-        FilterNames=["380NUV","450BLU","486HIB","501OIII","550GRN","650RED",
+        FilterNames=["380NUV","450BLU","486HIB","501OIII","550GRN","650RED","632OI",
                      "647CNT","656HIA","658NII","672SII","685NIR","742NIR", "807NIR",
                      "889CH4","940NIR","1000NIR"]
-        WavelengthCenters=[379.5,460.0,486.0,499.0,525.0,647.0,
+        WavelengthCenters=[379.5,460.0,486.0,499.0,525.0,647.0,632.0,
                            647.0,656.0,658.0,672.0,842.5,871.0,903.5,
                            889.0,940.0,1000.0]
-        WavelengthWidths=[15.4,100.0,10.0,10.0,90.0,75.0,
+        WavelengthWidths=[15.4,100.0,10.0,10.0,90.0,75.0,10.0,
                           10.0,11.0,10.0,10.0,315.0,258.0,193.0,
                           11.2,10.0,30.0]
         #Widths are from integration bounds in "FluxCalibration.xlsx" for 
